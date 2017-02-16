@@ -85,11 +85,21 @@ rm -rf PRUEBA/*
 17.-Crear los directorios dir1, dir2 y dir3 en el directorio PRUEBA. Dentro de dir1 crear el directorio dir11.Dentro del directorio 
 dir3 crear el directorio dir31. Dentro del directorio dir31, crear los directorios dir311 y dir312.
 
-preguntar -->
-mkdir PRUEBA
-mkdir PRUEBA/dir1
-mkdir dir1/dir11
+Falta ejecutarlo -->
 
+mkdir PRUEBA
+
+mkdir PRUEBA/dir1
+
+mkdir PRUEBA/dir1/dir11
+
+mkdir PRUEBA/dir2
+
+mkdir PRUEBA/dir3
+
+mkdir PRUEBA/dir3/dir31
+
+mkdir PRUEBA/dir3/dir31/dir311
 
 18.-Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
 

@@ -114,7 +114,8 @@ cp PRUEBA/mensaje PRUEBA/dir3
 
 tree
 
-21.-Copiar los archivos del directorio rc.d que se encuentra en /etc al directorio dir31.
+21.-Copiar los archivos del directorio rc0.d que se encuentra en /etc al directorio dir31.
+
 
 
 22.-Copiar en el directorio dir311 los archivos de /bin que tengan una a como segunda letra y su nombre tenga cuatro letras.

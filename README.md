@@ -2,7 +2,7 @@
 
 1.-Listar todos los archivos del directorio bin.
 
-ls /bin
+ls /bin  
 
 
 2.-Listar todos los archivos del directorio tmp.

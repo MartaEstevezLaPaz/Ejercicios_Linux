@@ -85,8 +85,6 @@ rm -rf PRUEBA/*
 17.-Crear los directorios dir1, dir2 y dir3 en el directorio PRUEBA. Dentro de dir1 crear el directorio dir11.Dentro del directorio 
 dir3 crear el directorio dir31. Dentro del directorio dir31, crear los directorios dir311 y dir312.
 
-Falta ejecutarlo -->
-
 mkdir PRUEBA
 
 mkdir PRUEBA/dir1

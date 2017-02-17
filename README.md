@@ -101,12 +101,18 @@ mkdir PRUEBA/dir3/dir31/dir311
 
 18.-Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
 
+cp /etc/moth PRUEBA/mensaje
+
 
 19.-Copiar mensaje en dir1, dir2 y dir3.
 
+cp PRUEBA/mensaje PRUEBA/dir1
+cp PRUEBA/mensaje PRUEBA/dir2
+cp PRUEBA/mensaje PRUEBA/dir3
 
 20.-Comprobar el ejercicio anterior mediante un solo comando.
 
+tree
 
 21.-Copiar los archivos del directorio rc.d que se encuentra en /etc al directorio dir31.
 

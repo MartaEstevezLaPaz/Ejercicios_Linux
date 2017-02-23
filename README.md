@@ -169,13 +169,21 @@ cp /bin/u* enlacedir1/nuevo1/
 
 34.- Crear dos enlaces duros del fichero fich1, llamarlo enlace, en los directorios dir1 y dir2.
 
-/*igual que el otro de crear enlaces pero sin el -s*/
+touch /home/marta/PRUEBA/fich1
+
+ln /home/marta/PRUEBA/fich1 /home/marta/PRUEBA/dir1/enlace
+
+ln /home/marta/PRUEBA/fich1 /home/marta/PRUEBA/dir2/enlace
 
 35.- Borrar el archivo fich1 y copiar enlace en dir3.
 
+rm PRUEBA/fich1
+
+cp PRUEBA/dir1/enlace PRUEBA/dir3/
 
 36.- Crear un enlace simbólico (llamado enlafich1) al fichero enlace de dir2 en dir1.
 
+ln -s /home/marta/PRUEBA/dir2/enlace PRUEBA/dir1/
 
 37.- Posicionarse en dir1 y, mediante el enlace creado, copiar el archivo fichl dentro de dir311.
 

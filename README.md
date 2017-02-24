@@ -2,12 +2,12 @@
 
 1.- Listar todos los archivos del directorio bin.
 
-ls /bin  
+ls /bin/  
 
 
 2.- Listar todos los archivos del directorio tmp.
 
-ls /tmp
+ls /tmp/
 
 
 3.- Listar todos los archivos del directorio etc que empiecen por t en orden inverso.
@@ -21,7 +21,7 @@ ls /dev/tty??
 
 
 5.- Listar todos los archivos del directorio dev que empiecen por tty y acaben en 1,2,3 ó 4.
-
+3
 ls /dev/tty*[1-4]
 
 
@@ -42,7 +42,7 @@ ls /etc/[^t]*
 
 9.- Listar todos los archivos del directorio usr y sus subdirectorios.
 
-ls -l /usr
+ls -R /usr
 
 
 10.- Cambiarse al directorio tmp, crear directorio PRUEBA.
@@ -121,13 +121,15 @@ cp /etc/rc0.d/* PRUEBA/dir3/dir31/
 
 22.- Copiar en el directorio dir311 los archivos de /bin que tengan una a como segunda letra y su nombre tenga cuatro letras.
 
-cp /bin/?a?? PRUEBA/dir3/dir31/dir311
+cp /bin/?a?? PRUEBA/dir3/dir31/dir311/
 
 23.- Copiar el directorio de otro usuario y sus subdirectorios debajo de dir11 (incluido el propio directorio).
 
+cp -r /home/user01/ /home/marta/PRUEBA/dir1/dir11/
+
 24.- Mover el directorio dir31 y sus subdirectorios debajo de dir2.
 
-mv PRUEBA/dir3/dir31 PRUEBA/dir2
+mv -r PRUEBA/dir3/dir31 PRUEBA/dir2
 
 25.- Mostrar por pantalla los archivos ordinarios del directorio HOME y sus subdirectorios.
 
@@ -143,7 +145,7 @@ rm -rf PRUEBA/dir1
  
 28.- Copiar al directorio dir312 los ficheros del directorio /dev que empiecen por t, acaben en una letra que vaya de la a a la b y tengan cinco letras en su nombre.
 
-ls /dev/t????[a*b]
+ls /dev/t????[a*b] PRUEBA/dir3/dir31/dir312/
 
 29.- Borrar los archivos de dir312 que no acaben en b y tengan una q como cuarta letra.
 
@@ -187,9 +189,13 @@ ln -s /home/marta/PRUEBA/dir2/enlace PRUEBA/dir1/
 
 37.- Posicionarse en dir1 y, mediante el enlace creado, copiar el archivo fichl dentro de dir311.
 
+cd dir 1
+
+cp enlace /tmp/prueba/dir3/dir31/dir311
 
 38.- Seguir en dir1 y, mediante el enlace creado, sacar por pantalla las líneas que tiene el archivo fich1.
 
+cat dir 1
 
 39.- Borrar el fichero fich1 de dir2.
 
@@ -199,24 +205,30 @@ ln -s /home/marta/PRUEBA/dir2/enlace PRUEBA/dir1/
 
 41.- Crear el directorio dir2 y dir3 en el directorio PRUEBA ¿Cuáles son los actuales permisos del directorio dir2?
 
+/*chmod ugo-wxr dir2*/
 
 42.- Utilizando la notación simbólica, eliminar todos los permisos de escritura (propietario, grupo, otros) del directorio dir2.
-/*chmod u +r - w (ta mal)*/
+
+chmod ugo-wxr dir2
 
 43.- Utilizando la notación octal, eliminar el permiso de lectura del directorio dir2, al resto de los usuarios.
 
+chmod 773 dir2
 
 44.- ¿Cuáles son ahora los permisos asociados a dir2?
 
+ls -l prueba/dir2
 
 45.- Crear bajo dir2, un directorio llamado dir2l.
 
 
 46.- Concederse a sí mismo permiso de escritura en el directorio dir2 e intentar de nuevo el paso anterior.
 
+chmod u+w dir2
 
 47.- ¿Cuáles son los valores por omisión asignados a los archivos?
 
+para el usuario escritura y lectura y para el resto solo lectura
 
 48.- Cambiar el directorio actual al directorio dir3. Imprimir su trayectoria completa para verificar el cambio.
 
@@ -226,6 +238,11 @@ ln -s /home/marta/PRUEBA/dir2/enlace PRUEBA/dir1/
 
 50.- Reiniciar el ordenador.
 
+reboot
+
+sudo init 6
+
+/*shutdow o poweroff o sudo init 0 apaga*/
 
 51.- Crear cuatro nuevos directorios llamados dira, dirb, dirc, y dird bajo el directorio actual.
 
